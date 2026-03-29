@@ -3,14 +3,15 @@
   "private": true,
   "version": "1.0.0",
   "description": "A lightweight, modern project and task management application built with React and Vite",
-  "author": "Your Name",
+  "author": "Abhishek Kushwaha",
+  "license": "MIT",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "build:prod": "vite build --minify terser",
     "preview": "vite preview",
-    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0"
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -24,10 +25,7 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
+    "terser": "^5.19.2",
     "vite": "^4.4.5"
-  },
-  "engines": {
-    "node": ">=16.0.0",
-    "npm": ">=8.0.0"
   }
 }

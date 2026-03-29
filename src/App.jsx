@@ -31,16 +31,14 @@ function AuthPage({ onLogin, onSignUp }) {
 // ============================================================================
 
 function App() {
-  const [currentUser, setCurrentUser] = useState(loadCurrentUser);
-
-  function loadCurrentUser() {
+  const [currentUser, setCurrentUser] = useState(() => {
     try {
       const raw = localStorage.getItem('project-tracker-current-user');
       return raw ? JSON.parse(raw) : null;
     } catch (e) {
       return null;
     }
-  }
+  });
 
   function handleLogin(user) {
     setCurrentUser(user);
@@ -63,17 +61,15 @@ function App() {
 // ============================================================================
 
 function MainApp({ user, onLogout }) {
-  const [projectsState, setProjectsState] = useState(loadProjectsData);
-  const projectFormModalRef = useRef(null);
-
-  function loadProjectsData() {
+  const [projectsState, setProjectsState] = useState(() => {
     try {
       const raw = localStorage.getItem('project-tracker-data');
       return raw ? JSON.parse(raw) : { selectedProjectId: undefined, projects: [], tasks: [] };
     } catch (e) {
       return { selectedProjectId: undefined, projects: [], tasks: [] };
     }
-  }
+  });
+  const projectFormModalRef = useRef(null);
 
   // Persist state to localStorage
   useEffect(() => {

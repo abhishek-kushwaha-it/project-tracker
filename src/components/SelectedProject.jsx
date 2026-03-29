@@ -52,7 +52,7 @@ export default function SelectedProject({
       
       <div className="project-info">
         <p className="project-description">{project.description}</p>
-        <div className="project-date">{formattedDate}</div>
+        <p style={{ fontSize: 'var(--font-size-sm)', color: 'var(--color-text-muted)' }}>Due: {formattedDate}</p>
       </div>
       
       <div className="project-info">

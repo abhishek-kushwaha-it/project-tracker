@@ -1,4 +1,4 @@
-export default function NavBar({ onNavigate, user, onLogout }) {
+export default function NavBar({ user, onLogout }) {
   return (
     <header className="header">
       <div className="header-content">

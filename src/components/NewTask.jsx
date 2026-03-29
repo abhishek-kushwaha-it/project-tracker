@@ -4,7 +4,7 @@ const PRIORITY_OPTIONS = [
   'Very Important',
   'Important',
   'Nice to have',
-  'Causmatic changes',
+  'Low Priority',
 ];
 
 export default function NewTask({ onAdd }) {

@@ -1,7 +1,7 @@
 import { forwardRef, useImperativeHandle, useRef } from 'react';
 import { createPortal } from 'react-dom';
 
-const Modal = forwardRef(function Modal({ children, buttonCaption, onConfirm }, ref) {
+const Modal = forwardRef(function Modal({ children }, ref) {
   const dialog = useRef();
 
   useImperativeHandle(ref, () => {
@@ -11,13 +11,6 @@ const Modal = forwardRef(function Modal({ children, buttonCaption, onConfirm }, 
       },
     };
   });
-
-  function handleConfirm() {
-    if (onConfirm) {
-      onConfirm();
-    }
-    dialog.current.close();
-  }
 
   return createPortal(
     <dialog ref={dialog} className="modal">
