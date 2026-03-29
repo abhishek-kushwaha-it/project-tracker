@@ -2,6 +2,7 @@
 
 A lightweight, modern project and task management application built with **React 18** and **Vite**. Manage your projects, track tasks, and monitor progress with an intuitive user interface.
 
+
 ## ✨ Features
 
 - **User Authentication**: Secure login and registration system with localStorage persistence
@@ -11,6 +12,7 @@ A lightweight, modern project and task management application built with **React
 - **Priority System**: Four priority levels - Very Important, Important, Nice to Have, Low Priority
 - **Responsive Design**: Works seamlessly on desktop, tablet, and mobile devices
 - **Local Data Persistence**: All data is stored locally using browser's localStorage
+
 
 ## 🚀 Quick Start
 
@@ -69,6 +71,7 @@ npm run lint
 npm run lint:fix
 ```
 
+
 ## 📁 Project Structure
 
 ```
@@ -92,6 +95,7 @@ project-tracker/
 ├── package.json                   # Project dependencies
 └── README.md                      # This file
 ```
+
 
 ## 🎯 Usage Guide
 
@@ -147,6 +151,7 @@ project-tracker/
 - No backend server required for local use
 - Each browser/device maintains its own separate data
 - **Note**: This is suitable for personal use. For production deployment, implement a backend server with proper authentication
+
 
 ## 📝 License
 
